@@ -1,7 +1,8 @@
 node { 
     checkout scm
     stage('Commit message') {
-        sh "make "
+        sh "make commit-check"
+        sh "env"
     }
     stage('Dependency') {
         sh "ls && make restore"
