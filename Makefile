@@ -9,3 +9,6 @@ all:
 
 lint:
 	echo "OK"
+
+commit-check:
+	echo $(GIT_COMMIT)

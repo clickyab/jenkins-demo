@@ -1,7 +1,10 @@
 node { 
     checkout scm
+    stage('Commit message') {
+        sh "make "
+    }
     stage('Dependency') {
-	    sh "ls && make restore"
+        sh "ls && make restore"
     }
     stage('CodeGen') {
         sh "make codegen"
