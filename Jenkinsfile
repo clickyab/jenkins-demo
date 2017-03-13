@@ -3,6 +3,7 @@ node {
     stage('Commit message') {
         sh "make commit-check"
         sh "env"
+        sh "ls -alh"
     }
     stage('Dependency') {
         sh "ls && make restore"
