@@ -1,9 +1,11 @@
 node { 
     checkout scm
     stage('Commit message') {
+        checkout scm
         sh "make commit-check"
         sh "env"
         sh "ls -alh"
+        sh "git log"
     }
     stage('Dependency') {
         sh "ls && make restore"
